@@ -19,10 +19,10 @@ dataSources:
         - name: LiminalMarket
           file: ./abis/LiminalMarket.json
       eventHandlers:
+        - event: TokenCreated(address,string)
+          handler: handleTokenCreated
         - event: OrderExecuted(address,string,uint256,uint256,uint256,string,uint256,uint256,uint256,address)
           handler: handleOrderExecuted
         - event: OrderFailed(address,string,uint256,string,address)
           handler: handleOrderFailed
-        - event: TokenCreated(address,string)
-          handler: handleTokenCreated
       file: ./src/liminal-market.ts

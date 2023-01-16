@@ -5,8 +5,8 @@ type LiminalMarketInfo @entity {
   orderFailedCount : BigInt!
   symbolCount: Int!
   symbols:[Symbol!]
-  balanceWei : BigInt!
-  balance : BigDecimal!
+  tslWei : BigInt!
+  tsl : BigDecimal!
   lastOrderAt: BigInt!
 }
 
