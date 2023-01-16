@@ -1,0 +1,28 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: LiminalMarket
+    network: mumbai
+    source:
+      address: "0x64dbAdEa7f4c9f962a2C3538c7901BFa29a88Ca1"
+      abi: LiminalMarket
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - LiminalMarketInfo
+        - Symbol
+      abis:
+        - name: LiminalMarket
+          file: ./abis/LiminalMarket.json
+      eventHandlers:
+        - event: OrderExecuted(address,string,uint256,uint256,uint256,string,uint256,uint256,uint256,address)
+          handler: handleOrderExecuted
+        - event: OrderFailed(address,string,uint256,string,address)
+          handler: handleOrderFailed
+        - event: TokenCreated(address,string)
+          handler: handleTokenCreated
+      file: ./src/liminal-market.ts

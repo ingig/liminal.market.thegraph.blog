@@ -1,0 +1,19 @@
+type LiminalMarketInfo @entity {
+  id: ID!
+  txCount : BigInt!
+  orderExecutedCount : BigInt!
+  orderFailedCount : BigInt!
+  symbolCount: Int!
+  symbols:[Symbol!]
+  balanceWei : BigInt!
+  balance : BigDecimal!
+  lastOrderAt: BigInt!
+}
+
+type Symbol @entity {
+  id: ID!
+  logo: String!
+  contract: String!
+  txCount : BigInt!
+  created : BigInt!
+}

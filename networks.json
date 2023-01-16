@@ -1,0 +1,14 @@
+{
+  "mumbai": {
+    "LiminalMarket": {
+      "address": "0x64dbAdEa7f4c9f962a2C3538c7901BFa29a88Ca1",
+      "startBlock": 29028516
+    }
+  },
+  "matic": {
+    "LiminalMarket": {
+      "address": "0x8B4fc0bcaED76a6569525d8Fe51E57cAd32FDd94",
+      "startBlock": 35350334
+    }
+  }
+}
