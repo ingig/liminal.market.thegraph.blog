@@ -34,7 +34,7 @@ export function handleOrderExecuted(event: OrderExecuted): void {
         liminalMarketInfo.tslWei = liminalMarketInfo.tslWei.minus(event.params.filledQty);
         liminalMarketInfo.tsl =liminalMarketInfo.tsl.minus(Helper.getDecimal(event.params.filledQty));
     }
-    liminalMarketInfo.lastOrderAt = Helper.getJsTimestamp(event.block.timestamp);
+    liminalMarketInfo.lastOrderAt = event.params.filledAt;
     liminalMarketInfo.save();
 }
 
@@ -44,7 +44,7 @@ export function handleOrderFailed(event : OrderFailed) : void {
     liminalMarketInfo.save();
 }
 
-function getLiminalMarketInfo(): LiminalMarketInfo {
+export function getLiminalMarketInfo(): LiminalMarketInfo {
     let liminalMarketInfo = LiminalMarketInfo.load("1")
     if (liminalMarketInfo != null) {
         return liminalMarketInfo;

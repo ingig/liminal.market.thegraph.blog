@@ -4,10 +4,10 @@
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ ingig/liminal.blog",
-    "create-local": "graph create --node http://localhost:8020/ ingig/liminal.blog",
-    "remove-local": "graph remove --node http://localhost:8020/ ingig/liminal.blog",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 ingig/liminal.blog",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ ingig/liminal-market-blog",
+    "create-local": "graph create --node http://localhost:8020/ ingig/liminal-market-blog",
+    "remove-local": "graph remove --node http://localhost:8020/ ingig/liminal-market-blog",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 ingig/liminal-market-blog",
     "test": "graph test"
   },
   "dependencies": {
